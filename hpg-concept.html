@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hospitality Performance Group | Homepage Concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ea;--bg2:#ebe5d8;--ink:#10241f;--mut:#51635d;--line:#d6cfbf;--deep:#0e2a25;--deep2:#143832;--brass:#a9824a;--brass2:#c9a468;--card:#fffdf8;--on-deep:#f3ede0;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1c19;--bg2:#102722;--ink:#efe9db;--mut:#a3b3ac;--line:#25403a;--card:#12302a;--deep:#07130f;--deep2:#0e2621;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1c19;--bg2:#102722;--ink:#efe9db;--mut:#a3b3ac;--line:#25403a;--card:#12302a;--deep:#07130f;--deep2:#0e2621;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:500;line-height:1.08;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600}
+header{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
+header.s{background:color-mix(in srgb,var(--deep) 94%,transparent);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--on-deep)}
+.logo b{font:600 22px "Cormorant Garamond",Georgia,serif;letter-spacing:.14em}
+.logo i{font-style:normal;display:block;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;opacity:.7;margin-top:-2px}
+.mark{width:38px;height:38px;border:1px solid var(--brass2);display:grid;place-items:center;font:600 15px "Cormorant Garamond",serif;color:var(--brass2);letter-spacing:.06em}
+nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{font-size:13px;letter-spacing:.06em;text-decoration:none;color:var(--on-deep);opacity:.85}
+nav a:hover{opacity:1;color:var(--brass2)}
+.btn{display:inline-block;padding:14px 28px;background:var(--brass);color:#fff;text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;border:1px solid var(--brass);cursor:pointer;font-family:inherit;transition:.25s}
+.btn:hover{background:transparent;color:var(--brass2)}
+.btn.o{background:transparent;color:var(--on-deep);border-color:rgba(243,237,224,.4)}
+.btn.o:hover{border-color:var(--brass2);color:var(--brass2)}
+nav .btn{padding:10px 18px;color:#fff}
+.menu{display:none;background:none;border:1px solid rgba(243,237,224,.4);color:var(--on-deep);padding:8px 12px;font:inherit;font-size:12px;letter-spacing:.14em}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:var(--on-deep);background:radial-gradient(900px 500px at 78% 30%,#1d5249 0%,transparent 65%),linear-gradient(170deg,#0e2a25 0%,#07130f 100%);overflow:hidden}
+.hero svg.waves{position:absolute;left:0;right:0;bottom:0;width:100%;height:42%;opacity:.5}
+.hero .wrap{position:relative;padding-top:130px;padding-bottom:150px}
+.hero h1{font-size:clamp(46px,7.2vw,98px);max-width:880px;margin:22px 0 26px}
+.hero h1 em{color:var(--brass2);font-style:italic}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);max-width:600px;opacity:.85;margin:0 0 38px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(243,237,224,.14);background:rgba(7,19,15,.55);backdrop-filter:blur(6px)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:22px;padding-bottom:22px}
+.stats b{font:500 34px "Cormorant Garamond",serif;color:var(--brass2);display:block;line-height:1}
+.stats span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+section{padding:110px 0}
+.head{max-width:720px;margin-bottom:56px}
+.head h2{font-size:clamp(36px,4.6vw,60px);margin:14px 0 18px}
+.head p{color:var(--mut);margin:0;font-size:18px}
+.aud{display:flex;gap:8px;margin-bottom:34px;flex-wrap:wrap}
+.aud button{background:transparent;border:1px solid var(--line);color:var(--ink);padding:10px 20px;font:500 13px Inter,sans-serif;letter-spacing:.08em;cursor:pointer;transition:.2s}
+.aud button[aria-pressed=true]{background:var(--deep);color:var(--on-deep);border-color:var(--deep)}
+:root[data-theme="dark"] .aud button[aria-pressed=true]{background:var(--brass);border-color:var(--brass);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{grid-column:span 2;background:var(--card);border:1px solid var(--line);padding:34px 30px 30px;position:relative;transition:transform .3s,box-shadow .3s,opacity .3s,border-color .3s}
+.card:nth-child(4),.card:nth-child(5){grid-column:span 3}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(14,42,37,.45);border-color:var(--brass)}
+.card.dim{opacity:.35}
+.card .n{font:500 15px "Cormorant Garamond",serif;color:var(--brass);letter-spacing:.2em}
+.card h3{font-size:30px;margin:14px 0 12px}
+.card p{color:var(--mut);font-size:15px;margin:0 0 18px}
+.card ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.card li{padding:9px 0 9px 20px;font-size:14px;border-bottom:1px solid var(--line);position:relative}
+.card li:before{content:"";position:absolute;left:0;top:19px;width:8px;height:1px;background:var(--brass)}
+.dark-s{background:var(--deep);color:var(--on-deep)}
+.dark-s .head p{color:rgba(243,237,224,.7)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(243,237,224,.2)}
+.step{padding:34px 28px 10px 0;border-right:1px solid rgba(243,237,224,.12);margin-right:28px}
+.step:last-child{border:0;margin:0}
+.step b{font:500 54px "Cormorant Garamond",serif;color:var(--brass2);line-height:1}
+.step h3{font-size:26px;margin:14px 0 10px}
+.step p{margin:0;opacity:.72;font-size:15px}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.split h2{font-size:clamp(36px,4.4vw,58px);margin:14px 0 20px}
+.split p{color:var(--mut);font-size:17px}
+.exp{list-style:none;padding:0;margin:28px 0 0}
+.exp li{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.exp li:last-child{border-bottom:1px solid var(--line)}
+.exp strong{min-width:150px;font:600 22px "Cormorant Garamond",serif}
+.exp span{color:var(--mut);font-size:15px}
+.mapbox{background:var(--deep);padding:30px;border:1px solid var(--line);color:var(--on-deep)}
+.mapbox svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:18px;opacity:.85;flex-wrap:wrap}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;background:var(--brass2)}
+.legend i.h{background:transparent;border:1px solid var(--brass2)}
+.pulse{animation:p 2.4s ease-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes p{0%{transform:scale(1);opacity:.7}100%{transform:scale(3.4);opacity:0}}
+.contact{background:var(--bg2)}
+.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.cgrid h2{font-size:clamp(36px,4.4vw,58px);margin:14px 0 20px}
+.cgrid p{color:var(--mut)}
+.det{margin-top:30px;border-top:1px solid var(--line)}
+.det div{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;display:flex;justify-content:space-between;gap:16px}
+.det span{color:var(--mut)}
+form{background:var(--card);border:1px solid var(--line);padding:38px;display:grid;gap:18px;grid-template-columns:1fr 1fr}
+form .f{grid-column:span 2}
+form .h{grid-column:span 1}
+label{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;background:transparent;border:1px solid var(--line);color:var(--ink);font:inherit;font-size:15px;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brass);outline-offset:-1px}
+select option{color:#10241f}
+.ok{display:none;grid-column:span 2;padding:16px;border:1px solid var(--brass);color:var(--brass);font-size:14px}
+footer{background:var(--deep);color:var(--on-deep);padding:60px 0 36px}
+.fg{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(243,237,224,.14)}
+footer small{display:block;padding-top:24px;opacity:.6;font-size:12.5px;letter-spacing:.04em}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.pulse{animation:none}html{scroll-behavior:auto}}
+@media(max-width:900px){
+nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--deep);padding:24px;gap:20px;align-items:flex-start}
+nav ul.open{display:flex}.menu{display:block}
+.grid{grid-template-columns:1fr}.card,.card:nth-child(4),.card:nth-child(5){grid-column:span 1}
+.steps{grid-template-columns:1fr 1fr}.step{margin-right:0;padding-right:16px;border-bottom:1px solid rgba(243,237,224,.12)}
+.split,.cgrid{grid-template-columns:1fr;gap:40px}
+.stats .wrap{grid-template-columns:1fr 1fr}.stats{position:relative}
+.hero{display:block}.hero .wrap{padding-bottom:50px}
+section{padding:76px 0}
+form{grid-template-columns:1fr;padding:26px}form .f,form .h,.ok{grid-column:span 1}
+.exp li{flex-direction:column;gap:4px}}
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+<a class="logo" href="#top"><span class="mark">HPG</span><span><b>HPG</b><i>Hospitality Performance Group</i></span></a>
+<nav><button class="menu" id="mb" aria-label="Menu">MENU</button>
+<ul id="nl"><li><a href="#focus">Focus Areas</a></li><li><a href="#approach">Approach</a></li><li><a href="#experience">Experience</a></li><li><a href="#markets">Markets</a></li><li><a class="btn" href="#contact">Start a Conversation</a></li></ul></nav>
+</div></header>
+
+<main id="top">
+<div class="hero">
+<svg class="waves" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#c9a468" stroke-width="1"><path opacity=".5" d="M0 120 C240 60 480 180 720 120 S1200 60 1440 120"/><path opacity=".4" d="M0 170 C240 110 480 230 720 170 S1200 110 1440 170"/><path opacity=".3" d="M0 220 C240 160 480 280 720 220 S1200 160 1440 220"/><path opacity=".2" d="M0 270 C240 210 480 330 720 270 S1200 210 1440 270"/><path opacity=".12" d="M0 320 C240 260 480 380 720 320 S1200 260 1440 320"/></g></svg>
+<div class="wrap">
+<div class="eyebrow">Emerald Coast · 30A · Hospitality Advisory</div>
+<h1>Operators who have built it, run it, and <em>fixed it.</em></h1>
+<p class="lead">Hospitality Performance Group is a strategic partner for restaurant owners, developers and investors, with four decades of hands-on experience from the floor to the ground-up build.</p>
+<div class="cta"><a class="btn" href="#contact">Start a Conversation</a><a class="btn o" href="#focus">Explore Our Focus Areas</a></div>
+</div>
+<div class="stats"><div class="wrap">
+<div><b>40+</b><span>Years in hospitality</span></div><div><b>5</b><span>Core practice areas</span></div><div><b>Multi-unit</b><span>Operations leadership</span></div><div><b>Concept to build</b><span>Construction &amp; expansion</span></div>
+</div></div>
+</div>
+
+<section id="focus"><div class="wrap">
+<div class="head rv"><div class="eyebrow">What We Do</div><h2>Five areas of focus. One accountable partner.</h2><p>Choose your perspective to see where HPG fits.</p></div>
+<div class="aud rv" id="aud" role="group" aria-label="Filter by audience">
+<button aria-pressed="true" data-a="all">Everyone</button><button aria-pressed="false" data-a="owner">Restaurant Owners</button><button aria-pressed="false" data-a="dev">Developers</button><button aria-pressed="false" data-a="inv">Investors</button></div>
+<div class="grid">
+<article class="card rv" data-for="owner"><span class="n">01</span><h3>Restaurant Consulting &amp; Operational Performance</h3><p>Practical, on-the-floor improvement to the numbers that decide whether a restaurant thrives.</p><ul><li>Operational and P&amp;L review</li><li>Systems, labor and cost control</li><li>Guest experience and service standards</li></ul></article>
+<article class="card rv" data-for="owner inv"><span class="n">02</span><h3>Concept Development &amp; Repositioning</h3><p>From a blank page to a distinct concept, or a fresh position for one that has lost its edge.</p><ul><li>Concept and market positioning</li><li>Menu and brand direction</li><li>Turnaround and relaunch planning</li></ul></article>
+<article class="card rv" data-for="dev inv"><span class="n">03</span><h3>Hospitality Development &amp; Construction Management</h3><p>Owner-side leadership from site and design through build-out, opening and ramp-up.</p><ul><li>Budget, schedule and contractor oversight</li><li>Design-to-operations coordination</li><li>Pre-opening readiness</li></ul></article>
+<article class="card rv" data-for="dev inv"><span class="n">04</span><h3>Acquisitions &amp; Strategic Partnerships</h3><p>Operator-grade diligence and introductions for those buying, selling or joining forces.</p><ul><li>Operational due diligence</li><li>Partner and operator matching</li><li>Deal structure support</li></ul></article>
+<article class="card rv" data-for="owner inv"><span class="n">05</span><h3>Leadership, Culture &amp; Profitability</h3><p>Strong teams are the foundation of strong margins. We build both together.</p><ul><li>Leadership development</li><li>Hiring, training and retention</li><li>Accountability and performance rhythm</li></ul></article>
+</div></div></section>
+
+<section id="approach" class="dark-s"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Our Approach</div><h2>Boots on the ground. Eyes on the numbers.</h2><p>Every engagement follows the same disciplined path, shaped to your property and your goals.</p></div>
+<div class="steps rv">
+<div class="step"><b>01</b><h3>Listen</h3><p>Time on site, with your team and your guests, before any recommendation.</p></div>
+<div class="step"><b>02</b><h3>Diagnose</h3><p>A clear read on operations, financials, market and people.</p></div>
+<div class="step"><b>03</b><h3>Execute</h3><p>A focused plan, delivered alongside your team with defined milestones.</p></div>
+<div class="step"><b>04</b><h3>Sustain</h3><p>Systems and leaders in place so results last after we step back.</p></div>
+</div></div></section>
+
+<section id="experience"><div class="wrap split">
+<div class="rv"><div class="eyebrow">Track Record</div><h2>Forty years, across the whole lifecycle.</h2>
+<p>HPG draws on a career spent leading multi-unit operations and overseeing construction and expansion. That perspective helps owners, developers and investors connect the build, the brand and the bottom line.</p>
+<ul class="exp"><li><strong>Operate</strong><span>Multi-unit leadership across restaurant and hospitality concepts.</span></li><li><strong>Build</strong><span>Construction oversight and expansion from groundbreaking to grand opening.</span></li><li><strong>Grow</strong><span>Repositioning, partnerships and the teams that carry them.</span></li></ul></div>
+<div class="rv" style="border:1px solid var(--line);background:var(--card);padding:44px">
+<div class="eyebrow">Selected Engagements</div>
+<h3 style="font-size:34px;margin:14px 0 16px">Case studies, ready for your projects.</h3>
+<p style="margin:0 0 22px">This space is designed for featured concepts, developments and results, each with a short story, role and outcome.</p>
+<div style="display:grid;gap:10px"><div style="border:1px dashed var(--line);padding:16px;font-size:13px;color:var(--mut)">Project 01 · Concept · Location · Result</div><div style="border:1px dashed var(--line);padding:16px;font-size:13px;color:var(--mut)">Project 02 · Development · Location · Result</div><div style="border:1px dashed var(--line);padding:16px;font-size:13px;color:var(--mut)">Project 03 · Turnaround · Location · Result</div></div>
+</div></div></section>
+
+<section id="markets" style="background:var(--bg2)"><div class="wrap split">
+<div class="mapbox rv"><svg viewBox="0 0 600 380" role="img" aria-label="Stylized coastline with Emerald Coast and 30A highlighted">
+<path d="M0 150 C80 140 140 170 220 160 C300 150 340 175 420 165 C500 155 550 160 600 150 L600 0 L0 0Z" fill="#143832"/>
+<path d="M0 150 C80 140 140 170 220 160 C300 150 340 175 420 165 C500 155 550 160 600 150" fill="none" stroke="#c9a468" stroke-width="1.5"/>
+<g fill="none" stroke="#c9a468" opacity=".25"><path d="M0 195 C100 185 200 215 300 205 S500 195 600 200"/><path d="M0 240 C100 230 200 260 300 250 S500 240 600 245"/><path d="M0 285 C100 275 200 305 300 295 S500 285 600 290"/><path d="M0 330 C100 320 200 350 300 340 S500 330 600 335"/></g>
+<line x1="140" y1="165" x2="420" y2="168" stroke="#c9a468" stroke-width="3" opacity=".7"/>
+<g fill="#c9a468"><circle cx="190" cy="165" r="6"/><circle cx="300" cy="162" r="6"/><circle cx="380" cy="168" r="6"/></g>
+<circle class="pulse" cx="300" cy="162" r="6" fill="#c9a468"/>
+<g fill="none" stroke="#c9a468" stroke-dasharray="3 5" opacity=".7"><circle cx="70" cy="140" r="9"/><circle cx="520" cy="156" r="9"/></g>
+<g fill="#f3ede0" font-family="Inter,sans-serif" font-size="12" letter-spacing="2"><text x="300" y="120" text-anchor="middle">30A CORRIDOR</text><text x="300" y="100" text-anchor="middle" fill="#c9a468">EMERALD COAST</text><text x="70" y="115" text-anchor="middle" opacity=".6" font-size="10">NEXT</text><text x="520" y="131" text-anchor="middle" opacity=".6" font-size="10">NEXT</text></g></svg>
+<div class="legend"><span><i></i>Home market</span><span><i class="h"></i>Expansion markets</span></div></div>
+<div class="rv"><div class="eyebrow">Markets</div><h2>Rooted on the Emerald Coast. Built to travel.</h2>
+<p>HPG begins where the team's relationships and local knowledge run deepest: the Emerald Coast and the 30A corridor, a market with strong demand, seasonal complexity and high guest expectations.</p>
+<p>The model is portable. As partners and opportunities arise, HPG brings the same operator-first approach to new coastal and destination markets.</p></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap cgrid">
+<div class="rv"><div class="eyebrow">Contact</div><h2>Let's talk about what you're building.</h2>
+<p>Whether you're opening, repositioning, acquiring or investing, a first conversation costs nothing. Tell us a little and we'll respond personally.</p>
+<div class="det"><div><span>Primary market</span>Emerald Coast &amp; 30A, Florida</div><div><span>Best for</span>Owners · Developers · Investors</div><div><span>Response</span>Personal reply to every inquiry</div></div></div>
+<form class="rv" id="cf" novalidate>
+<div class="h"><label for="n">Name</label><input id="n" required autocomplete="name"></div>
+<div class="h"><label for="e">Email</label><input id="e" type="email" required autocomplete="email"></div>
+<div class="h"><label for="c">Company</label><input id="c" autocomplete="organization"></div>
+<div class="h"><label for="i">I am a</label><select id="i"><option>Restaurant owner</option><option>Developer</option><option>Investor</option><option>Other</option></select></div>
+<div class="f"><label for="a">Area of interest</label><select id="a"><option>Restaurant consulting &amp; performance</option><option>Concept development &amp; repositioning</option><option>Development &amp; construction management</option><option>Acquisitions &amp; partnerships</option><option>Leadership, culture &amp; profitability</option></select></div>
+<div class="f"><label for="m">How can we help?</label><textarea id="m" rows="4"></textarea></div>
+<div class="f"><button class="btn" type="submit">Send Inquiry</button></div>
+<div class="ok" id="ok" role="status">Thank you. This is a concept preview, so no message was sent.</div>
+</form></div></section>
+</main>
+
+<footer><div class="wrap"><div class="fg">
+<div class="logo"><span class="mark">HPG</span><span><b>HPG</b><i>Hospitality Performance Group</i></span></div>
+<div style="display:flex;gap:28px;font-size:13px;letter-spacing:.06em"><a href="#focus">Focus Areas</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div>
+<small>© 2026 Hospitality Performance Group. All rights reserved. Design concept preview.</small></div></footer>
+
+<script>
+(function(){
+var h=document.getElementById('hd');
+function s(){h.classList.toggle('s',window.scrollY>40)}s();addEventListener('scroll',s,{passive:true});
+var nl=document.getElementById('nl');
+document.getElementById('mb').onclick=function(){nl.classList.toggle('open')};
+nl.addEventListener('click',function(e){if(e.target.tagName==='A')nl.classList.remove('open')});
+var bs=document.querySelectorAll('#aud button'),cs=document.querySelectorAll('.card');
+bs.forEach(function(b){b.onclick=function(){bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+var a=b.dataset.a;cs.forEach(function(c){c.classList.toggle('dim',a!=='all'&&c.dataset.for.split(' ').indexOf(a)<0)})}});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block'});
+})();
+</script>
+</body>
+</html>
